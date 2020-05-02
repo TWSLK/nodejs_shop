@@ -1,0 +1,2633 @@
+[2020-04-23T10:48:12.749] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - Load ./config-default.js...
+[2020-04-23T10:48:12.756] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - Cannot load ./config-override.js.
+[2020-04-23T10:48:13.206] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process.env.NODE_ENV = [undefined]
+[2020-04-23T10:48:13.207] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - isProduction = [false]
+[2020-04-23T10:48:13.256] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: cart-contrl.js...
+[2020-04-23T10:48:13.624] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - init sequelize...
+[2020-04-23T10:48:13.656] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file advert.js...
+[2020-04-23T10:48:13.658] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: advert
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": true
+  },
+  "position": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "url": {
+    "type": "STRING(100)",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.687] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file cart.js...
+[2020-04-23T10:48:13.690] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: cart
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.697] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file collection.js...
+[2020-04-23T10:48:13.704] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: collection
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.729] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file group_attri.js...
+[2020-04-23T10:48:13.733] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: group_attri
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "prodGroup": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriId": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "attriName": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.774] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file group_attri_value.js...
+[2020-04-23T10:48:13.776] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: group_attri_value
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupAttriId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriValue": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.815] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file order.js...
+[2020-04-23T10:48:13.825] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: order
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recipient": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "recipientPhone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "deliveryType": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "expressCompany": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "expressNumber": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "status": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "deliveryFee": {
+    "type": "DECIMAL",
+    "defaultValue": 10,
+    "allowNull": false
+  },
+  "prodPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "totalPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "payStartTime": {
+    "type": "DATE",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.895] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file order_prod.js...
+[2020-04-23T10:48:13.909] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: order_prod
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "orderId": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "cartId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.939] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file product.js...
+[2020-04-23T10:48:13.941] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: product
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recommend": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "sales": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "stock": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "detailImages": {
+    "type": "STRING(300)",
+    "allowNull": false
+  },
+  "detailHtml": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.960] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file prod_attri.js...
+[2020-04-23T10:48:13.962] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: prod_attri
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "groupAttriValueId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.976] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file user.js...
+[2020-04-23T10:48:13.977] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: user
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "email": {
+    "type": "STRING(100)",
+    "unique": true,
+    "allowNull": true
+  },
+  "mobile": {
+    "type": "STRING(11)",
+    "unique": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "unique": true,
+    "allowNull": false
+  },
+  "passwd": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "gender": {
+    "type": "BOOLEAN",
+    "allowNull": true
+  },
+  "headImage": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:13.995] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - import model from file user_address.js...
+[2020-04-23T10:48:13.998] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - model defined for table: user_address
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "phone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "type": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T10:48:14.025] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/cart
+[2020-04-23T10:48:14.026] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/delCartProd
+[2020-04-23T10:48:14.027] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/chgCartProdCount
+[2020-04-23T10:48:14.028] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/addCartProd
+[2020-04-23T10:48:14.029] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: collection-contrl.js...
+[2020-04-23T10:48:14.032] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/collection/index
+[2020-04-23T10:48:14.042] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/collection/act
+[2020-04-23T10:48:14.044] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/collection/del/:id
+[2020-04-23T10:48:14.045] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: index-contrl.js...
+[2020-04-23T10:48:14.058] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/
+[2020-04-23T10:48:14.071] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/api/search/:key/:limit/:offset/:ordertype
+[2020-04-23T10:48:14.073] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/userPage
+[2020-04-23T10:48:14.075] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/checkUserInfo
+[2020-04-23T10:48:14.076] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/uptUserInfo
+[2020-04-23T10:48:14.077] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/uptPassPage
+[2020-04-23T10:48:14.082] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/checkPassword
+[2020-04-23T10:48:14.114] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/uptPass
+[2020-04-23T10:48:14.143] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: order-contrl.js...
+[2020-04-23T10:48:14.146] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/settlement/:orderId
+[2020-04-23T10:48:14.147] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/orderDetail/:orderId
+[2020-04-23T10:48:14.152] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/settlementAct
+[2020-04-23T10:48:14.153] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/buyNow
+[2020-04-23T10:48:14.154] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/confirmOrder
+[2020-04-23T10:48:14.155] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/confirmReceipt
+[2020-04-23T10:48:14.157] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/delOrder
+[2020-04-23T10:48:14.158] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/cancelOrder
+[2020-04-23T10:48:14.159] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/paySuccCancelOrder
+[2020-04-23T10:48:14.160] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/payOrder
+[2020-04-23T10:48:14.161] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/paySuccess/:orderId
+[2020-04-23T10:48:14.162] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/user/orderList
+[2020-04-23T10:48:14.164] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/getOrderList
+[2020-04-23T10:48:14.164] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: prod-contrl.js...
+[2020-04-23T10:48:14.181] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/prodDetail/:pid
+[2020-04-23T10:48:14.189] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - process controller: signin-contrl.js...
+[2020-04-23T10:48:14.192] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - openCaptcha = [false]
+[2020-04-23T10:48:14.193] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/api/signin
+[2020-04-23T10:48:14.193] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/signout
+[2020-04-23T10:48:14.194] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/login
+[2020-04-23T10:48:14.194] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/resetPass
+[2020-04-23T10:48:14.195] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/registPage
+[2020-04-23T10:48:14.195] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/api/regist
+[2020-04-23T10:48:14.196] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/api/countUserMobile
+[2020-04-23T10:48:14.207] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/userapi/getLoginUserInfo
+[2020-04-23T10:48:14.208] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: POST /zshop/api/checkCaptcha
+[2020-04-23T10:48:14.208] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - register URL mapping: GET /zshop/captcha
+[2020-04-23T10:48:14.215] [INFO] [2667a59579bc4745bb16d92c67fe5733] system - app started at port 3000...
+[2020-04-23T10:48:36.710] [INFO] [4e9d8fd77b8f485b867a917cbbf511c2] zshop - Process GET /...
+[2020-04-23T10:48:36.737] [INFO] [4e9d8fd77b8f485b867a917cbbf511c2] zshop - ctx.response.status=404
+[2020-04-23T10:48:36.751] [INFO] [1c7253491c9f44a091e67929de264988] zshop - Process GET /static/html/404.html...
+[2020-04-23T10:48:36.761] [INFO] [1c7253491c9f44a091e67929de264988] zshop - ctx.response.status=200
+[2020-04-23T10:48:36.838] [INFO] [c18d1d24c44a4c15aa05def03bc1dd22] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T10:48:36.842] [INFO] [1bf110d967b44cdeb5f40d9b5d07ae8d] zshop - Process GET /static/css/style.css...
+[2020-04-23T10:48:36.850] [INFO] [1bf110d967b44cdeb5f40d9b5d07ae8d] zshop - ctx.response.status=200
+[2020-04-23T10:48:36.868] [INFO] [1bf110d967b44cdeb5f40d9b5d07ae8d] zshop - ctx.response.status=200
+[2020-04-23T10:48:36.911] [INFO] [2c8849fff4934eeca098f507b2d7c16f] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T10:48:36.914] [INFO] [806bfea5826f43b3b03331b2f7139300] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T10:48:36.916] [INFO] [806bfea5826f43b3b03331b2f7139300] zshop - ctx.response.status=200
+[2020-04-23T10:48:36.918] [INFO] [806bfea5826f43b3b03331b2f7139300] zshop - ctx.response.status=200
+[2020-04-23T10:48:37.005] [INFO] [2fcc71fa47fd4e2889803cca05586f54] zshop - Process GET /favicon.ico...
+[2020-04-23T10:48:37.009] [INFO] [2fcc71fa47fd4e2889803cca05586f54] zshop - ctx.response.status=200
+[2020-04-23T11:12:50.216] [INFO] [8eb5d61eff2942f7b833e5fd85efeb63] zshop - Process GET /...
+[2020-04-23T11:12:50.224] [INFO] [8eb5d61eff2942f7b833e5fd85efeb63] zshop - ctx.response.status=404
+[2020-04-23T11:12:50.255] [INFO] [127d69ee8192428a8868cb64d10872a8] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:12:50.262] [INFO] [127d69ee8192428a8868cb64d10872a8] zshop - ctx.response.status=200
+[2020-04-23T11:12:50.331] [INFO] [f1ae190a4c8840da81f845e72271714b] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:12:50.335] [INFO] [d1433199c1754e4a92a14ee854c384b0] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:12:50.337] [INFO] [d1433199c1754e4a92a14ee854c384b0] zshop - ctx.response.status=200
+[2020-04-23T11:12:50.342] [INFO] [d1433199c1754e4a92a14ee854c384b0] zshop - ctx.response.status=200
+[2020-04-23T11:12:50.376] [INFO] [5eec982b91314cf398a026d3916ba545] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:12:50.401] [INFO] [aae9fc2221234c088aa21cd264b64cc2] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:12:50.402] [INFO] [aae9fc2221234c088aa21cd264b64cc2] zshop - ctx.response.status=200
+[2020-04-23T11:12:50.404] [INFO] [aae9fc2221234c088aa21cd264b64cc2] zshop - ctx.response.status=200
+[2020-04-23T11:12:59.591] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - Load ./config-default.js...
+[2020-04-23T11:12:59.605] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - Cannot load ./config-override.js.
+[2020-04-23T11:13:00.276] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process.env.NODE_ENV = [undefined]
+[2020-04-23T11:13:00.277] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - isProduction = [false]
+[2020-04-23T11:13:00.356] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: cart-contrl.js...
+[2020-04-23T11:13:00.727] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - init sequelize...
+[2020-04-23T11:13:00.763] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file advert.js...
+[2020-04-23T11:13:00.765] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: advert
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": true
+  },
+  "position": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "url": {
+    "type": "STRING(100)",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.784] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file cart.js...
+[2020-04-23T11:13:00.786] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: cart
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.803] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file collection.js...
+[2020-04-23T11:13:00.804] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: collection
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.821] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file group_attri.js...
+[2020-04-23T11:13:00.822] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: group_attri
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "prodGroup": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriId": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "attriName": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.839] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file group_attri_value.js...
+[2020-04-23T11:13:00.841] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: group_attri_value
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupAttriId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriValue": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.859] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file order.js...
+[2020-04-23T11:13:00.867] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: order
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recipient": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "recipientPhone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "deliveryType": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "expressCompany": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "expressNumber": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "status": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "deliveryFee": {
+    "type": "DECIMAL",
+    "defaultValue": 10,
+    "allowNull": false
+  },
+  "prodPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "totalPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "payStartTime": {
+    "type": "DATE",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.923] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file order_prod.js...
+[2020-04-23T11:13:00.927] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: order_prod
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "orderId": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "cartId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:00.969] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file product.js...
+[2020-04-23T11:13:00.972] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: product
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recommend": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "sales": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "stock": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "detailImages": {
+    "type": "STRING(300)",
+    "allowNull": false
+  },
+  "detailHtml": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:01.020] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file prod_attri.js...
+[2020-04-23T11:13:01.021] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: prod_attri
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "groupAttriValueId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:01.040] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file user.js...
+[2020-04-23T11:13:01.053] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: user
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "email": {
+    "type": "STRING(100)",
+    "unique": true,
+    "allowNull": true
+  },
+  "mobile": {
+    "type": "STRING(11)",
+    "unique": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "unique": true,
+    "allowNull": false
+  },
+  "passwd": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "gender": {
+    "type": "BOOLEAN",
+    "allowNull": true
+  },
+  "headImage": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:01.088] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - import model from file user_address.js...
+[2020-04-23T11:13:01.091] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - model defined for table: user_address
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "phone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "type": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:13:01.126] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/cart
+[2020-04-23T11:13:01.127] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/delCartProd
+[2020-04-23T11:13:01.130] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/chgCartProdCount
+[2020-04-23T11:13:01.132] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/addCartProd
+[2020-04-23T11:13:01.133] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: collection-contrl.js...
+[2020-04-23T11:13:01.140] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/collection/index
+[2020-04-23T11:13:01.141] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/collection/act
+[2020-04-23T11:13:01.151] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/collection/del/:id
+[2020-04-23T11:13:01.153] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: index-contrl.js...
+[2020-04-23T11:13:01.177] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/
+[2020-04-23T11:13:01.186] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/api/search/:key/:limit/:offset/:ordertype
+[2020-04-23T11:13:01.187] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/userPage
+[2020-04-23T11:13:01.188] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/checkUserInfo
+[2020-04-23T11:13:01.189] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/uptUserInfo
+[2020-04-23T11:13:01.190] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/uptPassPage
+[2020-04-23T11:13:01.191] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/checkPassword
+[2020-04-23T11:13:01.205] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/uptPass
+[2020-04-23T11:13:01.206] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: order-contrl.js...
+[2020-04-23T11:13:01.209] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/settlement/:orderId
+[2020-04-23T11:13:01.222] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/orderDetail/:orderId
+[2020-04-23T11:13:01.224] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/settlementAct
+[2020-04-23T11:13:01.226] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/buyNow
+[2020-04-23T11:13:01.247] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/confirmOrder
+[2020-04-23T11:13:01.255] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/confirmReceipt
+[2020-04-23T11:13:01.259] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/delOrder
+[2020-04-23T11:13:01.263] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/cancelOrder
+[2020-04-23T11:13:01.267] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/paySuccCancelOrder
+[2020-04-23T11:13:01.301] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/payOrder
+[2020-04-23T11:13:01.302] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/paySuccess/:orderId
+[2020-04-23T11:13:01.303] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/user/orderList
+[2020-04-23T11:13:01.305] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/getOrderList
+[2020-04-23T11:13:01.306] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: prod-contrl.js...
+[2020-04-23T11:13:01.309] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/prodDetail/:pid
+[2020-04-23T11:13:01.310] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - process controller: signin-contrl.js...
+[2020-04-23T11:13:01.329] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - openCaptcha = [false]
+[2020-04-23T11:13:01.337] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/api/signin
+[2020-04-23T11:13:01.339] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/signout
+[2020-04-23T11:13:01.340] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/login
+[2020-04-23T11:13:01.341] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/resetPass
+[2020-04-23T11:13:01.343] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/registPage
+[2020-04-23T11:13:01.357] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/api/regist
+[2020-04-23T11:13:01.358] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/api/countUserMobile
+[2020-04-23T11:13:01.370] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/userapi/getLoginUserInfo
+[2020-04-23T11:13:01.373] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: POST /zshop/api/checkCaptcha
+[2020-04-23T11:13:01.374] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - register URL mapping: GET /zshop/captcha
+[2020-04-23T11:13:01.380] [INFO] [3b7972d5915340b5b1e4ea35367f6231] system - app started at port 3000...
+[2020-04-23T11:13:34.219] [INFO] [79db41c90bcb48799debe5ebe7bfb6f9] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:13:34.241] [INFO] [79db41c90bcb48799debe5ebe7bfb6f9] zshop - ctx.response.status=200
+[2020-04-23T11:13:34.268] [INFO] [8adc2b567f954a7387fdc3cdf01382a8] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:13:34.270] [INFO] [ed9c9dea168f434693f39aecf5745979] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:13:34.273] [INFO] [ed9c9dea168f434693f39aecf5745979] zshop - ctx.response.status=200
+[2020-04-23T11:13:34.287] [INFO] [ed9c9dea168f434693f39aecf5745979] zshop - ctx.response.status=200
+[2020-04-23T11:13:34.300] [INFO] [caebe7ad946b4c6c954ee1bb1b917484] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:13:34.305] [INFO] [ee4066e1ec734034829ecc814ded4b36] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:13:34.309] [INFO] [ee4066e1ec734034829ecc814ded4b36] zshop - ctx.response.status=200
+[2020-04-23T11:13:34.318] [INFO] [ee4066e1ec734034829ecc814ded4b36] zshop - ctx.response.status=200
+[2020-04-23T11:13:34.321] [INFO] [1ce5aabea2d9488ca95f94a84ff47235] zshop - Process GET /favicon.ico...
+[2020-04-23T11:13:34.326] [INFO] [1ce5aabea2d9488ca95f94a84ff47235] zshop - ctx.response.status=200
+[2020-04-23T11:19:55.480] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - Load ./config-default.js...
+[2020-04-23T11:19:55.494] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - Cannot load ./config-override.js.
+[2020-04-23T11:19:55.871] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process.env.NODE_ENV = [undefined]
+[2020-04-23T11:19:55.871] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - isProduction = [false]
+[2020-04-23T11:19:55.915] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: cart-contrl.js...
+[2020-04-23T11:19:56.190] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - init sequelize...
+[2020-04-23T11:19:56.221] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file advert.js...
+[2020-04-23T11:19:56.223] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: advert
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": true
+  },
+  "position": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "url": {
+    "type": "STRING(100)",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.252] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file cart.js...
+[2020-04-23T11:19:56.253] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: cart
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.269] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file collection.js...
+[2020-04-23T11:19:56.271] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: collection
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.285] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file group_attri.js...
+[2020-04-23T11:19:56.288] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: group_attri
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "prodGroup": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriId": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "attriName": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.307] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file group_attri_value.js...
+[2020-04-23T11:19:56.310] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: group_attri_value
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupAttriId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriValue": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.336] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file order.js...
+[2020-04-23T11:19:56.339] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: order
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recipient": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "recipientPhone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "deliveryType": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "expressCompany": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "expressNumber": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "status": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "deliveryFee": {
+    "type": "DECIMAL",
+    "defaultValue": 10,
+    "allowNull": false
+  },
+  "prodPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "totalPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "payStartTime": {
+    "type": "DATE",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.362] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file order_prod.js...
+[2020-04-23T11:19:56.366] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: order_prod
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "orderId": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "cartId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.374] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file product.js...
+[2020-04-23T11:19:56.376] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: product
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recommend": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "sales": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "stock": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "detailImages": {
+    "type": "STRING(300)",
+    "allowNull": false
+  },
+  "detailHtml": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.396] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file prod_attri.js...
+[2020-04-23T11:19:56.399] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: prod_attri
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "groupAttriValueId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.406] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file user.js...
+[2020-04-23T11:19:56.409] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: user
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "email": {
+    "type": "STRING(100)",
+    "unique": true,
+    "allowNull": true
+  },
+  "mobile": {
+    "type": "STRING(11)",
+    "unique": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "unique": true,
+    "allowNull": false
+  },
+  "passwd": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "gender": {
+    "type": "BOOLEAN",
+    "allowNull": true
+  },
+  "headImage": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.424] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - import model from file user_address.js...
+[2020-04-23T11:19:56.425] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - model defined for table: user_address
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "phone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "type": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:19:56.449] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/cart
+[2020-04-23T11:19:56.450] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/delCartProd
+[2020-04-23T11:19:56.451] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/chgCartProdCount
+[2020-04-23T11:19:56.452] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/addCartProd
+[2020-04-23T11:19:56.452] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: collection-contrl.js...
+[2020-04-23T11:19:56.455] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/collection/index
+[2020-04-23T11:19:56.455] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/collection/act
+[2020-04-23T11:19:56.456] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/collection/del/:id
+[2020-04-23T11:19:56.457] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: index-contrl.js...
+[2020-04-23T11:19:56.465] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/
+[2020-04-23T11:19:56.468] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/api/search/:key/:limit/:offset/:ordertype
+[2020-04-23T11:19:56.469] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/userPage
+[2020-04-23T11:19:56.470] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/checkUserInfo
+[2020-04-23T11:19:56.471] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/uptUserInfo
+[2020-04-23T11:19:56.471] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/uptPassPage
+[2020-04-23T11:19:56.472] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/checkPassword
+[2020-04-23T11:19:56.473] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/uptPass
+[2020-04-23T11:19:56.474] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: order-contrl.js...
+[2020-04-23T11:19:56.475] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/settlement/:orderId
+[2020-04-23T11:19:56.476] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/orderDetail/:orderId
+[2020-04-23T11:19:56.478] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/settlementAct
+[2020-04-23T11:19:56.484] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/buyNow
+[2020-04-23T11:19:56.486] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/confirmOrder
+[2020-04-23T11:19:56.487] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/confirmReceipt
+[2020-04-23T11:19:56.488] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/delOrder
+[2020-04-23T11:19:56.488] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/cancelOrder
+[2020-04-23T11:19:56.489] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/paySuccCancelOrder
+[2020-04-23T11:19:56.490] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/payOrder
+[2020-04-23T11:19:56.491] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/paySuccess/:orderId
+[2020-04-23T11:19:56.491] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/user/orderList
+[2020-04-23T11:19:56.492] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/getOrderList
+[2020-04-23T11:19:56.493] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: prod-contrl.js...
+[2020-04-23T11:19:56.495] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/prodDetail/:pid
+[2020-04-23T11:19:56.500] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - process controller: signin-contrl.js...
+[2020-04-23T11:19:56.503] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - openCaptcha = [false]
+[2020-04-23T11:19:56.504] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/api/signin
+[2020-04-23T11:19:56.504] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/signout
+[2020-04-23T11:19:56.505] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/login
+[2020-04-23T11:19:56.506] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/resetPass
+[2020-04-23T11:19:56.506] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/registPage
+[2020-04-23T11:19:56.507] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/api/regist
+[2020-04-23T11:19:56.507] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/api/countUserMobile
+[2020-04-23T11:19:56.508] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/userapi/getLoginUserInfo
+[2020-04-23T11:19:56.509] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: POST /zshop/api/checkCaptcha
+[2020-04-23T11:19:56.510] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - register URL mapping: GET /zshop/captcha
+[2020-04-23T11:19:56.514] [INFO] [c13727b8a215433cb01d378d6d8600ca] system - app started at port 3000...
+[2020-04-23T11:20:33.524] [INFO] [bb0c795ec94249aab7755fe8bdf10579] zshop - Process GET /...
+[2020-04-23T11:20:33.542] [INFO] [bb0c795ec94249aab7755fe8bdf10579] zshop - ctx.response.status=404
+[2020-04-23T11:20:33.592] [INFO] [6364a35d648b4baa893433b69f947e03] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:20:33.604] [INFO] [6364a35d648b4baa893433b69f947e03] zshop - ctx.response.status=200
+[2020-04-23T11:20:33.677] [INFO] [18084c72f56547bf8ed6e5c6e8716fc3] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:20:33.682] [INFO] [18084c72f56547bf8ed6e5c6e8716fc3] zshop - ctx.response.status=200
+[2020-04-23T11:20:33.695] [INFO] [f1caaef3703e4f079e34ef73ce16ae7a] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:20:33.715] [INFO] [f1caaef3703e4f079e34ef73ce16ae7a] zshop - ctx.response.status=200
+[2020-04-23T11:20:33.750] [INFO] [e2342fd45769466e80cae5197310f6d8] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:20:33.752] [INFO] [bdd7e40cadaf4123819ba8e943e5a554] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:20:33.755] [INFO] [bdd7e40cadaf4123819ba8e943e5a554] zshop - ctx.response.status=200
+[2020-04-23T11:20:33.756] [INFO] [bdd7e40cadaf4123819ba8e943e5a554] zshop - ctx.response.status=200
+[2020-04-23T11:20:36.681] [INFO] [1cb9f91c55d54226af7a5be906d85695] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:20:36.683] [INFO] [8d6697e29c414ec19f75bba8c108feac] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:20:36.695] [INFO] [8d6697e29c414ec19f75bba8c108feac] zshop - ctx.response.status=200
+[2020-04-23T11:20:36.698] [INFO] [8d6697e29c414ec19f75bba8c108feac] zshop - ctx.response.status=200
+[2020-04-23T11:20:42.381] [INFO] [a00f2159b85245bb9821bcc8a9db2b18] zshop - Process GET /zshop/...
+[2020-04-23T11:20:42.385] [INFO] [a00f2159b85245bb9821bcc8a9db2b18] zshop - ===index in===
+[2020-04-23T11:20:42.541] [INFO] [a00f2159b85245bb9821bcc8a9db2b18] zshop - Process error: {"name":"SequelizeAccessDeniedError","message":"ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)","parent":{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","fatal":true},"original":{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","fatal":true}}
+[2020-04-23T11:20:42.548] [INFO] [a00f2159b85245bb9821bcc8a9db2b18] zshop - SequelizeAccessDeniedError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+    at Handshake._callback (D:\文件下载\zshop-master\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:82:20)
+    at Handshake.Sequence.end (D:\文件下载\zshop-master\node_modules\mysql\lib\protocol\sequences\Sequence.js:85:24)
+    at Handshake.ErrorPacket (D:\文件下载\zshop-master\node_modules\mysql\lib\protocol\sequences\Handshake.js:105:8)
+    at Protocol._parsePacket (D:\文件下载\zshop-master\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\文件下载\zshop-master\node_modules\mysql\lib\protocol\Parser.js:74:12)
+    at Protocol.write (D:\文件下载\zshop-master\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\文件下载\zshop-master\node_modules\mysql\lib\Connection.js:109:28)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[2020-04-23T11:20:42.554] [INFO] [a00f2159b85245bb9821bcc8a9db2b18] zshop - ctx.response.status=302
+[2020-04-23T11:20:42.559] [INFO] [27b795db62194f719298271cd1fd6029] zshop - Process GET /static/html/500.html...
+[2020-04-23T11:20:42.561] [INFO] [27b795db62194f719298271cd1fd6029] zshop - ctx.response.status=200
+[2020-04-23T11:20:42.598] [INFO] [017051feefbe4906949f45a2e0dd1519] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:20:42.601] [INFO] [017051feefbe4906949f45a2e0dd1519] zshop - ctx.response.status=200
+[2020-04-23T11:20:42.603] [INFO] [bae4688db29a4c419ff0ca6160946325] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:20:42.623] [INFO] [bae4688db29a4c419ff0ca6160946325] zshop - ctx.response.status=200
+[2020-04-23T11:20:42.648] [INFO] [80ba48301a664ea08623c552c5714190] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:20:42.657] [INFO] [88948cb4a372478e9f52f45ca327e0e1] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:20:42.662] [INFO] [88948cb4a372478e9f52f45ca327e0e1] zshop - ctx.response.status=200
+[2020-04-23T11:20:42.679] [INFO] [88948cb4a372478e9f52f45ca327e0e1] zshop - ctx.response.status=200
+[2020-04-23T11:23:50.834] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Load ./config-default.js...
+[2020-04-23T11:23:50.856] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Cannot load ./config-override.js.
+[2020-04-23T11:23:51.328] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process.env.NODE_ENV = [undefined]
+[2020-04-23T11:23:51.329] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - isProduction = [false]
+[2020-04-23T11:23:51.367] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: cart-contrl.js...
+[2020-04-23T11:23:51.688] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - init sequelize...
+[2020-04-23T11:23:51.721] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file advert.js...
+[2020-04-23T11:23:51.724] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: advert
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": true
+  },
+  "position": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "url": {
+    "type": "STRING(100)",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.746] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file cart.js...
+[2020-04-23T11:23:51.748] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: cart
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.765] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file collection.js...
+[2020-04-23T11:23:51.766] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: collection
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.780] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file group_attri.js...
+[2020-04-23T11:23:51.782] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: group_attri
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "prodGroup": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriId": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "attriName": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.796] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file group_attri_value.js...
+[2020-04-23T11:23:51.797] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: group_attri_value
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupAttriId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "attriValue": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.809] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file order.js...
+[2020-04-23T11:23:51.812] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: order
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recipient": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "recipientPhone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "deliveryType": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "expressCompany": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "expressNumber": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "status": {
+    "type": "INTEGER",
+    "defaultValue": 1,
+    "allowNull": false
+  },
+  "deliveryFee": {
+    "type": "DECIMAL",
+    "defaultValue": 10,
+    "allowNull": false
+  },
+  "prodPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "totalPrice": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "payStartTime": {
+    "type": "DATE",
+    "allowNull": true
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.844] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file order_prod.js...
+[2020-04-23T11:23:51.845] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: order_prod
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "orderId": {
+    "type": "STRING(50)",
+    "allowNull": false
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "count": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "cartId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.860] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file product.js...
+[2020-04-23T11:23:51.862] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: product
+{
+  "id": {
+    "type": "INTEGER",
+    "autoIncrement": true,
+    "primaryKey": true,
+    "allowNull": false
+  },
+  "groupId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "description": {
+    "type": "STRING(200)",
+    "allowNull": false
+  },
+  "price": {
+    "type": "DECIMAL",
+    "allowNull": false
+  },
+  "image": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "recommend": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "sales": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "stock": {
+    "type": "INTEGER",
+    "defaultValue": 0,
+    "allowNull": false
+  },
+  "detailImages": {
+    "type": "STRING(300)",
+    "allowNull": false
+  },
+  "detailHtml": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.896] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file prod_attri.js...
+[2020-04-23T11:23:51.903] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: prod_attri
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "prodId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "groupAttriValueId": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.924] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file user.js...
+[2020-04-23T11:23:51.926] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: user
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "email": {
+    "type": "STRING(100)",
+    "unique": true,
+    "allowNull": true
+  },
+  "mobile": {
+    "type": "STRING(11)",
+    "unique": true,
+    "allowNull": false
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "unique": true,
+    "allowNull": false
+  },
+  "passwd": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "gender": {
+    "type": "BOOLEAN",
+    "allowNull": true
+  },
+  "headImage": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.943] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - import model from file user_address.js...
+[2020-04-23T11:23:51.944] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - model defined for table: user_address
+{
+  "id": {
+    "type": "STRING(50)",
+    "primaryKey": true
+  },
+  "userId": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "province": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "city": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "area": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "address": {
+    "type": "STRING(100)",
+    "allowNull": false
+  },
+  "name": {
+    "type": "STRING(20)",
+    "allowNull": false
+  },
+  "phone": {
+    "type": "STRING(30)",
+    "allowNull": false
+  },
+  "type": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "createdAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "updatedAt": {
+    "type": "DATE",
+    "allowNull": false
+  },
+  "version": {
+    "type": "BIGINT",
+    "allowNull": false,
+    "defaultValue": 0
+  }
+}
+[2020-04-23T11:23:51.962] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/cart
+[2020-04-23T11:23:51.963] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/delCartProd
+[2020-04-23T11:23:51.963] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/chgCartProdCount
+[2020-04-23T11:23:51.964] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/addCartProd
+[2020-04-23T11:23:51.964] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: collection-contrl.js...
+[2020-04-23T11:23:51.967] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/collection/index
+[2020-04-23T11:23:51.967] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/collection/act
+[2020-04-23T11:23:51.968] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/collection/del/:id
+[2020-04-23T11:23:51.984] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: index-contrl.js...
+[2020-04-23T11:23:52.020] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/
+[2020-04-23T11:23:52.022] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/api/search/:key/:limit/:offset/:ordertype
+[2020-04-23T11:23:52.033] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/userPage
+[2020-04-23T11:23:52.033] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/checkUserInfo
+[2020-04-23T11:23:52.034] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/uptUserInfo
+[2020-04-23T11:23:52.054] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/uptPassPage
+[2020-04-23T11:23:52.060] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/checkPassword
+[2020-04-23T11:23:52.064] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/uptPass
+[2020-04-23T11:23:52.065] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: order-contrl.js...
+[2020-04-23T11:23:52.066] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/settlement/:orderId
+[2020-04-23T11:23:52.067] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/orderDetail/:orderId
+[2020-04-23T11:23:52.068] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/settlementAct
+[2020-04-23T11:23:52.076] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/buyNow
+[2020-04-23T11:23:52.077] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/confirmOrder
+[2020-04-23T11:23:52.078] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/confirmReceipt
+[2020-04-23T11:23:52.079] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/delOrder
+[2020-04-23T11:23:52.079] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/cancelOrder
+[2020-04-23T11:23:52.080] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/paySuccCancelOrder
+[2020-04-23T11:23:52.081] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/payOrder
+[2020-04-23T11:23:52.082] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/paySuccess/:orderId
+[2020-04-23T11:23:52.082] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/user/orderList
+[2020-04-23T11:23:52.084] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/getOrderList
+[2020-04-23T11:23:52.085] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: prod-contrl.js...
+[2020-04-23T11:23:52.093] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/prodDetail/:pid
+[2020-04-23T11:23:52.094] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - process controller: signin-contrl.js...
+[2020-04-23T11:23:52.096] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - openCaptcha = [false]
+[2020-04-23T11:23:52.097] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/api/signin
+[2020-04-23T11:23:52.097] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/signout
+[2020-04-23T11:23:52.098] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/login
+[2020-04-23T11:23:52.099] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/resetPass
+[2020-04-23T11:23:52.099] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/registPage
+[2020-04-23T11:23:52.100] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/api/regist
+[2020-04-23T11:23:52.100] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/api/countUserMobile
+[2020-04-23T11:23:52.101] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/userapi/getLoginUserInfo
+[2020-04-23T11:23:52.110] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: POST /zshop/api/checkCaptcha
+[2020-04-23T11:23:52.110] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - register URL mapping: GET /zshop/captcha
+[2020-04-23T11:23:52.114] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - app started at port 3000...
+[2020-04-23T11:24:06.254] [INFO] [db264b04b7914411b2974573c6506324] zshop - Process GET /static/html/500.html...
+[2020-04-23T11:24:06.272] [INFO] [db264b04b7914411b2974573c6506324] zshop - ctx.response.status=200
+[2020-04-23T11:24:06.322] [INFO] [6bb911d0655a4211837c86d92417b3c6] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:24:06.329] [INFO] [6bb911d0655a4211837c86d92417b3c6] zshop - ctx.response.status=200
+[2020-04-23T11:24:06.337] [INFO] [2d009b2e34714eebaee083d0c7e07b91] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:24:06.352] [INFO] [2d009b2e34714eebaee083d0c7e07b91] zshop - ctx.response.status=200
+[2020-04-23T11:24:06.374] [INFO] [b9ff066d68874200be01d0c38845b9e7] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:24:06.376] [INFO] [6ef28d19e6844976b1af4279833c6886] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:24:06.378] [INFO] [6ef28d19e6844976b1af4279833c6886] zshop - ctx.response.status=200
+[2020-04-23T11:24:06.379] [INFO] [6ef28d19e6844976b1af4279833c6886] zshop - ctx.response.status=200
+[2020-04-23T11:24:06.405] [INFO] [1a38c3b775744de5b551525600763d1d] zshop - Process GET /favicon.ico...
+[2020-04-23T11:24:06.416] [INFO] [1a38c3b775744de5b551525600763d1d] zshop - ctx.response.status=200
+[2020-04-23T11:24:10.668] [INFO] [89531b0610d64e849ff19e70863a2013] zshop - Process GET /...
+[2020-04-23T11:24:10.676] [INFO] [89531b0610d64e849ff19e70863a2013] zshop - ctx.response.status=404
+[2020-04-23T11:24:10.696] [INFO] [02e7557f68ca4ea0ba25684b91a9731f] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:24:10.700] [INFO] [02e7557f68ca4ea0ba25684b91a9731f] zshop - ctx.response.status=200
+[2020-04-23T11:24:10.748] [INFO] [a158acb0e9614fccb3735543f4dc9739] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:24:10.753] [INFO] [a158acb0e9614fccb3735543f4dc9739] zshop - ctx.response.status=200
+[2020-04-23T11:24:10.777] [INFO] [0f5c9d6049e2465e8428ed4b2f81083e] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:24:10.781] [INFO] [0f5c9d6049e2465e8428ed4b2f81083e] zshop - ctx.response.status=200
+[2020-04-23T11:24:10.814] [INFO] [fce343e4c6444fbaacb5e0497ac7c5dc] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:24:10.824] [INFO] [fce343e4c6444fbaacb5e0497ac7c5dc] zshop - ctx.response.status=200
+[2020-04-23T11:24:10.836] [INFO] [ccc32729e31e4b5b9c059ddab1a5dc0f] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:24:10.861] [INFO] [ccc32729e31e4b5b9c059ddab1a5dc0f] zshop - ctx.response.status=200
+[2020-04-23T11:24:34.872] [INFO] [8d97dedab4114d3fb610cd32d9689381] zshop - Process GET /zshop/...
+[2020-04-23T11:24:34.876] [INFO] [8d97dedab4114d3fb610cd32d9689381] zshop - ===index in===
+[2020-04-23T11:24:35.049] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `groupId`, `name`, `description`, `price`, `image`, `recommend`, `sales`, `stock`, `detailImages`, `detailHtml`, `createdAt`, `updatedAt`, `version` FROM `product` AS `product` WHERE `product`.`recommend` = 1;
+[2020-04-23T11:24:35.061] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `name`, `description`, `position`, `image`, `url`, `createdAt`, `updatedAt`, `version` FROM `advert` AS `advert` WHERE `advert`.`position` = 1;
+[2020-04-23T11:24:35.068] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `name`, `description`, `position`, `image`, `url`, `createdAt`, `updatedAt`, `version` FROM `advert` AS `advert` WHERE `advert`.`position` = 2;
+[2020-04-23T11:24:35.079] [INFO] [8d97dedab4114d3fb610cd32d9689381] zshop - ===index mid===
+[2020-04-23T11:24:35.132] [INFO] [8d97dedab4114d3fb610cd32d9689381] zshop - ===index out===
+[2020-04-23T11:24:35.134] [INFO] [8d97dedab4114d3fb610cd32d9689381] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.209] [INFO] [b4f0f7e4f8ab4683b9e734b0374db598] zshop - Process GET /static/css/swiper-4.1.6.min.css...
+[2020-04-23T11:24:35.211] [INFO] [f5b7d257d4f04d7682d88860f925ec78] zshop - Process GET /static/js/lib/require.js...
+[2020-04-23T11:24:35.214] [INFO] [2710b9e9326442bfb5e28191409a4184] zshop - Process GET /static/images/vt/s1.png...
+[2020-04-23T11:24:35.242] [INFO] [1b30828ef3bc4607b0210caa62873638] zshop - Process GET /static/images/vt/s2.png...
+[2020-04-23T11:24:35.244] [INFO] [f639286cf2b24acb85d8c01a39bdf6b5] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:24:35.245] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:24:35.247] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.248] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.248] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.253] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.264] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.265] [INFO] [26ab867e1a114687b33e45365e5f784e] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.278] [INFO] [5d368bf5c22d4dcd81c2bdfa289418d6] zshop - Process GET /static/images/vt/s3.png...
+[2020-04-23T11:24:35.284] [INFO] [a9d9dfc0ced54f99a59af8cabe837582] zshop - Process GET /static/images/menu2.png...
+[2020-04-23T11:24:35.306] [INFO] [43e6e09dd5864299ae9d96bdd4c1b623] zshop - Process GET /static/images/menu3.png...
+[2020-04-23T11:24:35.308] [INFO] [4015fe7045f74526b72cd134592e1bb7] zshop - Process GET /static/images/menu4.png...
+[2020-04-23T11:24:35.310] [INFO] [4015fe7045f74526b72cd134592e1bb7] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.312] [INFO] [4015fe7045f74526b72cd134592e1bb7] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.314] [INFO] [4015fe7045f74526b72cd134592e1bb7] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.316] [INFO] [4015fe7045f74526b72cd134592e1bb7] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.321] [INFO] [3f6bd35e30024de7926263bbebd07986] zshop - Process GET /static/images/menu1.png...
+[2020-04-23T11:24:35.338] [INFO] [7fa1a23bc75b4e2793272fdd664ac206] zshop - Process GET /static/images/vt/mid.png...
+[2020-04-23T11:24:35.340] [INFO] [c538f721a0de4ba58be5235e8a24d69d] zshop - Process GET /static/images/product/good1.jpg...
+[2020-04-23T11:24:35.342] [INFO] [9c83e1612bf448d3916258e7c57c68a0] zshop - Process GET /static/images/product/good2.jpg...
+[2020-04-23T11:24:35.345] [INFO] [9c83e1612bf448d3916258e7c57c68a0] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.397] [INFO] [34c0607c2b594a3b8c840117cff092b5] zshop - Process GET /static/images/product/good5.jpg...
+[2020-04-23T11:24:35.406] [INFO] [1a614601131840f1b721d60a7d4747e8] zshop - Process GET /static/images/product/good6.jpg...
+[2020-04-23T11:24:35.422] [INFO] [282833826b0c487fb9b2d245123ac2cc] zshop - Process GET /static/images/cart.png...
+[2020-04-23T11:24:35.424] [INFO] [282833826b0c487fb9b2d245123ac2cc] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.428] [INFO] [282833826b0c487fb9b2d245123ac2cc] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.436] [INFO] [282833826b0c487fb9b2d245123ac2cc] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.474] [INFO] [944d58e5c4ea44a4a56df2b085115548] zshop - Process GET /static/images/goods.png...
+[2020-04-23T11:24:35.486] [INFO] [4a2b48c3e04d432f9dd10b6143dbf4de] zshop - Process GET /static/images/my.png...
+[2020-04-23T11:24:35.512] [INFO] [4a2b48c3e04d432f9dd10b6143dbf4de] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.522] [INFO] [df324d71677b43489e5f51316cbbd0b0] zshop - Process GET /static/images/index_on.png...
+[2020-04-23T11:24:35.532] [INFO] [df324d71677b43489e5f51316cbbd0b0] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.542] [INFO] [8cde327a77f642b8ba934e9ecb3dc087] zshop - Process GET /static/images/center-icon-order-all.png...
+[2020-04-23T11:24:35.557] [INFO] [8cde327a77f642b8ba934e9ecb3dc087] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.563] [INFO] [793c9854725c43aaa74dbf1eeeea6ec4] zshop - Process GET /static/images/center-icon-order-dfk.png...
+[2020-04-23T11:24:35.566] [INFO] [793c9854725c43aaa74dbf1eeeea6ec4] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.581] [INFO] [44faa5fecc334230bb9e3ba974fac2ca] zshop - Process GET /static/images/center-icon-order-dfh.png...
+[2020-04-23T11:24:35.582] [INFO] [44faa5fecc334230bb9e3ba974fac2ca] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.586] [INFO] [44faa5fecc334230bb9e3ba974fac2ca] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.600] [INFO] [0d8d98338fe34890938def3edadec004] zshop - Process GET /static/images/center-icon-order-dsh.png...
+[2020-04-23T11:24:35.611] [INFO] [0d8d98338fe34890938def3edadec004] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.613] [INFO] [c8f504471ede4555be678b5a22e2c321] zshop - Process GET /static/images/center-icon-order-dpj.png...
+[2020-04-23T11:24:35.616] [INFO] [be2ccf63d03740cc91fa426143d62d1d] zshop - Process GET /static/images/center-icon-sc.png...
+[2020-04-23T11:24:35.621] [INFO] [b5854987e9c54d10b202e9688c9fbad8] zshop - Process GET /static/images/center-icon-dz.png...
+[2020-04-23T11:24:35.628] [INFO] [b5854987e9c54d10b202e9688c9fbad8] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.630] [INFO] [b5854987e9c54d10b202e9688c9fbad8] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.637] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - Process GET /static/images/center-icon-dlmm.png...
+[2020-04-23T11:24:35.645] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.647] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.648] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.649] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.653] [INFO] [6859c941867d48eda9d4fd5f5a0939bd] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.667] [INFO] [75131cbfc68848beb1dca8f87d50b081] zshop - Process GET /static/images/center-icon-out.png...
+[2020-04-23T11:24:35.684] [INFO] [6402b14420c44b0dba91f54e81943ae2] zshop - Process GET /static/js/app/index-main.js...
+[2020-04-23T11:24:35.688] [INFO] [6402b14420c44b0dba91f54e81943ae2] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.694] [INFO] [6402b14420c44b0dba91f54e81943ae2] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.711] [INFO] [245eeaa22df14d8a8c6e8b14aec13b0c] zshop - Process GET /static/js/app/index.js...
+[2020-04-23T11:24:35.716] [INFO] [245eeaa22df14d8a8c6e8b14aec13b0c] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.727] [INFO] [62d5c2f75ff944ffabb5edccbbd4077f] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:24:35.734] [INFO] [eb09afab2340486b9281a232aca7a9ad] zshop - Process GET /static/js/lib/vue.min.js...
+[2020-04-23T11:24:35.754] [INFO] [6a85d983ec6d4c0aa9e4740fc3ebd928] zshop - Process GET /static/js/lib/vue-resource.min.js...
+[2020-04-23T11:24:35.764] [INFO] [b44187ccc14e4010be66c8c550765f86] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:24:35.766] [INFO] [1e002c3beca74dd3b0b48fb73e22879e] zshop - Process GET /static/js/lib/swiper-4.1.6.min.js...
+[2020-04-23T11:24:35.770] [INFO] [0e802fa93fe0428798764a657d787751] zshop - Process GET /static/js/app/public.js...
+[2020-04-23T11:24:35.778] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.780] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.782] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.791] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.814] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.816] [INFO] [0e802fa93fe0428798764a657d787751] zshop - ctx.response.status=200
+[2020-04-23T11:24:35.972] [INFO] [873676e53e534131b078d9e14948a55f] zshop - Process GET /static/js/lib/swiper.min.js.map...
+[2020-04-23T11:24:35.974] [INFO] [873676e53e534131b078d9e14948a55f] zshop - ctx.response.status=404
+[2020-04-23T11:24:35.979] [INFO] [3dc0cde8e5b34baf80894b2743460c95] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:24:35.992] [INFO] [3dc0cde8e5b34baf80894b2743460c95] zshop - ctx.response.status=200
+[2020-04-23T11:24:42.232] [INFO] [65aef3332ab2415681113dff6b47a86c] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:24:42.235] [INFO] [dc8f34d81bb44c5099f69adbe0d80206] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:24:42.237] [INFO] [b76705706ead4f3382aa11aeb94303ab] zshop - Process GET /static/css/swiper-4.1.6.min.css...
+[2020-04-23T11:24:42.240] [INFO] [b76705706ead4f3382aa11aeb94303ab] zshop - ctx.response.status=200
+[2020-04-23T11:24:42.243] [INFO] [b76705706ead4f3382aa11aeb94303ab] zshop - ctx.response.status=200
+[2020-04-23T11:24:42.260] [INFO] [b76705706ead4f3382aa11aeb94303ab] zshop - ctx.response.status=200
+[2020-04-23T11:24:42.319] [INFO] [8bef524fef5c4c3cb5c3af644be74104] zshop - Process GET /static/js/lib/swiper.min.js.map...
+[2020-04-23T11:24:42.321] [INFO] [8bef524fef5c4c3cb5c3af644be74104] zshop - ctx.response.status=404
+[2020-04-23T11:24:42.325] [INFO] [7fefe7a17ca14cc8bec4def198f6033d] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:24:42.338] [INFO] [7fefe7a17ca14cc8bec4def198f6033d] zshop - ctx.response.status=200
+[2020-04-23T11:24:53.506] [INFO] [3084d548cd8d4522960a99072ed6e592] zshop - Process GET /static/images/index.png...
+[2020-04-23T11:24:53.509] [INFO] [3084d548cd8d4522960a99072ed6e592] zshop - ctx.response.status=200
+[2020-04-23T11:24:53.515] [INFO] [d2b1e9a2bdf74baea53fc0871ab862b8] zshop - Process GET /static/images/goods_on.png...
+[2020-04-23T11:24:53.518] [INFO] [d2b1e9a2bdf74baea53fc0871ab862b8] zshop - ctx.response.status=200
+[2020-04-23T11:24:55.935] [INFO] [075efa9aaebb463c9459a81f7fb93f89] zshop - Process GET /static/images/cart_on.png...
+[2020-04-23T11:24:55.939] [INFO] [075efa9aaebb463c9459a81f7fb93f89] zshop - ctx.response.status=200
+[2020-04-23T11:24:55.963] [INFO] [fb3b2fa40e404dd7b794d13a380c3093] zshop - Process GET /static/images/goods.png...
+[2020-04-23T11:24:55.965] [INFO] [fb3b2fa40e404dd7b794d13a380c3093] zshop - ctx.response.status=200
+[2020-04-23T11:24:55.975] [INFO] [4dad4448969b4508b340bee130360937] zshop - Process GET /zshop/user/cart...
+[2020-04-23T11:24:55.992] [INFO] [4dad4448969b4508b340bee130360937] zshop - ctx.response.status=302
+[2020-04-23T11:24:56.004] [INFO] [a69714ff6fa04a83a590aef6af532a51] zshop - Process GET /zshop/login?loginSuccUrl=/zshop/user/cart...
+[2020-04-23T11:24:56.019] [INFO] [a69714ff6fa04a83a590aef6af532a51] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.077] [INFO] [ca5fa0674a964cccb53918a74003e165] zshop - Process GET /static/images/vcode.jpg...
+[2020-04-23T11:24:56.080] [INFO] [ca5fa0674a964cccb53918a74003e165] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.084] [INFO] [54594ec6c07e4251a3a6cf23099aa1f6] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:24:56.086] [INFO] [1e8b0b5fde21455285aa5a2602f82bfb] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:24:56.107] [INFO] [63c0835ff0be4e8f884441ea21da053e] zshop - Process GET /static/js/lib/require.js...
+[2020-04-23T11:24:56.113] [INFO] [63c0835ff0be4e8f884441ea21da053e] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.116] [INFO] [63c0835ff0be4e8f884441ea21da053e] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.132] [INFO] [63c0835ff0be4e8f884441ea21da053e] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.219] [INFO] [3dcbfad20c3642349e2533b166873b56] zshop - Process GET /static/js/app/login.js...
+[2020-04-23T11:24:56.221] [INFO] [8972ad9c4035484ea2c9553a95c8f766] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:24:56.222] [INFO] [e9de3be6cc924f9090d1ff3ce3d2a222] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:24:56.225] [INFO] [e9de3be6cc924f9090d1ff3ce3d2a222] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.236] [INFO] [e9de3be6cc924f9090d1ff3ce3d2a222] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.238] [INFO] [e9de3be6cc924f9090d1ff3ce3d2a222] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.300] [INFO] [c68e2f45d9954c2087c10bd405a10d66] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:24:56.304] [INFO] [c68e2f45d9954c2087c10bd405a10d66] zshop - ctx.response.status=200
+[2020-04-23T11:24:56.306] [INFO] [40c8b477117242f28e0f5b2a60fd8d4a] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:24:56.310] [INFO] [40c8b477117242f28e0f5b2a60fd8d4a] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.301] [INFO] [29b3e47080414bdea43cf8408e702edc] zshop - Process GET /zshop/...
+[2020-04-23T11:25:00.302] [INFO] [29b3e47080414bdea43cf8408e702edc] zshop - ===index in===
+[2020-04-23T11:25:00.313] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `groupId`, `name`, `description`, `price`, `image`, `recommend`, `sales`, `stock`, `detailImages`, `detailHtml`, `createdAt`, `updatedAt`, `version` FROM `product` AS `product` WHERE `product`.`recommend` = 1;
+[2020-04-23T11:25:00.325] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `name`, `description`, `position`, `image`, `url`, `createdAt`, `updatedAt`, `version` FROM `advert` AS `advert` WHERE `advert`.`position` = 1;
+[2020-04-23T11:25:00.333] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `name`, `description`, `position`, `image`, `url`, `createdAt`, `updatedAt`, `version` FROM `advert` AS `advert` WHERE `advert`.`position` = 2;
+[2020-04-23T11:25:00.344] [INFO] [29b3e47080414bdea43cf8408e702edc] zshop - ===index mid===
+[2020-04-23T11:25:00.356] [INFO] [29b3e47080414bdea43cf8408e702edc] zshop - ===index out===
+[2020-04-23T11:25:00.359] [INFO] [29b3e47080414bdea43cf8408e702edc] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.437] [INFO] [33f9926d543746ac9aabfd6050262a2f] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:25:00.441] [INFO] [91a24193eddd45bf82a35f2ebd1b4138] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:25:00.443] [INFO] [fad84c7add7b42f2866ae27e58ccc98f] zshop - Process GET /static/css/swiper-4.1.6.min.css...
+[2020-04-23T11:25:00.457] [INFO] [aad2ccedaf894042a5851b9db9ee0096] zshop - Process GET /static/js/lib/require.js...
+[2020-04-23T11:25:00.462] [INFO] [8d7838560bd540c5ab1bc143258260cc] zshop - Process GET /static/images/vt/s1.png...
+[2020-04-23T11:25:00.463] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - Process GET /static/images/vt/s2.png...
+[2020-04-23T11:25:00.466] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.477] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.479] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.483] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.499] [INFO] [a702b54af23e4fd6995ba9b5899bf345] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.503] [INFO] [2220338cf8d74cd385c2402f1037ecd5] zshop - Process GET /static/images/vt/s3.png...
+[2020-04-23T11:25:00.521] [INFO] [4ebfe15b558848c5a6acbc1db2b970b2] zshop - Process GET /static/images/menu2.png...
+[2020-04-23T11:25:00.523] [INFO] [1867bd360aa540e589f1e238c47a6847] zshop - Process GET /static/images/menu3.png...
+[2020-04-23T11:25:00.525] [INFO] [1867bd360aa540e589f1e238c47a6847] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.528] [INFO] [1867bd360aa540e589f1e238c47a6847] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.530] [INFO] [1867bd360aa540e589f1e238c47a6847] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.535] [INFO] [1867bd360aa540e589f1e238c47a6847] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.558] [INFO] [1c8849cc39194ce3bffc769cf35d9597] zshop - Process GET /static/images/menu4.png...
+[2020-04-23T11:25:00.570] [INFO] [dca6b4efde4246579a7c4117676c53bc] zshop - Process GET /static/images/menu1.png...
+[2020-04-23T11:25:00.594] [INFO] [cedf1b742f6041c5bae98e006fe1f58b] zshop - Process GET /static/images/cart.png...
+[2020-04-23T11:25:00.625] [INFO] [ecedbafa79b743dda55f973cd17c9f27] zshop - Process GET /static/images/product/good1.jpg...
+[2020-04-23T11:25:00.632] [INFO] [06d6323afd7847628d9ee1f864ced29d] zshop - Process GET /static/images/goods.png...
+[2020-04-23T11:25:00.635] [INFO] [a605a6e92cf147049e92b4062789912b] zshop - Process GET /static/images/my.png...
+[2020-04-23T11:25:00.643] [INFO] [a605a6e92cf147049e92b4062789912b] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.644] [INFO] [a605a6e92cf147049e92b4062789912b] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.649] [INFO] [034f3e253773477a85ff5c26dd0eb381] zshop - Process GET /static/images/index_on.png...
+[2020-04-23T11:25:00.661] [INFO] [9ebe795cf69546db8d76b4c98f4b1714] zshop - Process GET /static/images/vt/mid.png...
+[2020-04-23T11:25:00.662] [INFO] [9ebe795cf69546db8d76b4c98f4b1714] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.663] [INFO] [9ebe795cf69546db8d76b4c98f4b1714] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.674] [INFO] [9ebe795cf69546db8d76b4c98f4b1714] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.680] [INFO] [4b9d4073b089470bae2d6eca3de02091] zshop - Process GET /static/images/product/good6.jpg...
+[2020-04-23T11:25:00.687] [INFO] [b9cdea3e0e0442c6b67a720a1fed40e7] zshop - Process GET /static/images/product/good2.jpg...
+[2020-04-23T11:25:00.696] [INFO] [07abe263ffa74dd18719b28a5b61b8a2] zshop - Process GET /static/images/product/good5.jpg...
+[2020-04-23T11:25:00.697] [INFO] [07abe263ffa74dd18719b28a5b61b8a2] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.705] [INFO] [07abe263ffa74dd18719b28a5b61b8a2] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.727] [INFO] [faaf9b581798472d94dac99bf5a961f7] zshop - Process GET /static/images/center-icon-order-all.png...
+[2020-04-23T11:25:00.730] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - Process GET /static/images/center-icon-order-dfk.png...
+[2020-04-23T11:25:00.732] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.739] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.748] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.753] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.776] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.790] [INFO] [9875a598e2dc44a3bfdb02c51de9cf81] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.819] [INFO] [fb43047ae5914e9f862befb3575fa8de] zshop - Process GET /static/images/center-icon-order-dfh.png...
+[2020-04-23T11:25:00.829] [INFO] [fb43047ae5914e9f862befb3575fa8de] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.844] [INFO] [b1a3db3189b646ef8e313a245018675d] zshop - Process GET /static/images/center-icon-order-dsh.png...
+[2020-04-23T11:25:00.851] [INFO] [2432be6563604efa96b8fa7930d99a5a] zshop - Process GET /static/images/center-icon-order-dpj.png...
+[2020-04-23T11:25:00.867] [INFO] [70ed05c6757744a9927cd5fc793da01e] zshop - Process GET /static/images/center-icon-sc.png...
+[2020-04-23T11:25:00.873] [INFO] [dd58b2a8ed494c959ac2897f79bfbd08] zshop - Process GET /static/images/center-icon-dz.png...
+[2020-04-23T11:25:00.884] [INFO] [dd58b2a8ed494c959ac2897f79bfbd08] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.894] [INFO] [dd58b2a8ed494c959ac2897f79bfbd08] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.896] [INFO] [dd58b2a8ed494c959ac2897f79bfbd08] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.897] [INFO] [8a9e091e0250466d99d75cc6101d4c16] zshop - Process GET /static/images/center-icon-dlmm.png...
+[2020-04-23T11:25:00.900] [INFO] [9175d7a00e4f43fa9f04e1d9afb96a80] zshop - Process GET /static/images/center-icon-out.png...
+[2020-04-23T11:25:00.913] [INFO] [9175d7a00e4f43fa9f04e1d9afb96a80] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.915] [INFO] [2c70e4bb3fa54da9abe81288303ef8f8] zshop - Process GET /static/js/app/index-main.js...
+[2020-04-23T11:25:00.921] [INFO] [2c70e4bb3fa54da9abe81288303ef8f8] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.928] [INFO] [2c70e4bb3fa54da9abe81288303ef8f8] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.929] [INFO] [2c70e4bb3fa54da9abe81288303ef8f8] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.949] [INFO] [c5c5a2473c32482ba290ff0ae83689fe] zshop - Process GET /static/js/app/index.js...
+[2020-04-23T11:25:00.960] [INFO] [c5c5a2473c32482ba290ff0ae83689fe] zshop - ctx.response.status=200
+[2020-04-23T11:25:00.973] [INFO] [3330fe547ca24709b2e26b181f7d9eed] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:25:00.993] [INFO] [b6f6a6bbdc3246e387b24d8bc14ee46b] zshop - Process GET /static/js/lib/vue.min.js...
+[2020-04-23T11:25:00.994] [INFO] [3caa442ef6fe4bceaa36784153c58529] zshop - Process GET /static/js/lib/vue-resource.min.js...
+[2020-04-23T11:25:00.995] [INFO] [f8a0acf774c446b4aa627befd6724e9b] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:25:00.997] [INFO] [1ac212fc8aed48cfa55ec161532ce162] zshop - Process GET /static/js/lib/swiper-4.1.6.min.js...
+[2020-04-23T11:25:00.998] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - Process GET /static/js/app/public.js...
+[2020-04-23T11:25:01.005] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.011] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.013] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.029] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.039] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.068] [INFO] [7e2436c3426744a2bff9a2c429784542] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.244] [INFO] [dc674206a273447d91f7c6dd830a9b35] zshop - Process GET /static/js/lib/swiper.min.js.map...
+[2020-04-23T11:25:01.246] [INFO] [dc674206a273447d91f7c6dd830a9b35] zshop - ctx.response.status=404
+[2020-04-23T11:25:01.249] [INFO] [a2ddb23fd60440bf8bfab318b299b54c] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:25:01.258] [INFO] [a2ddb23fd60440bf8bfab318b299b54c] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.815] [INFO] [163f932a086c4cc1aeff8ec7e74a8f5a] zshop - Process POST /zshop/userapi/getLoginUserInfo...
+[2020-04-23T11:25:01.818] [INFO] [163f932a086c4cc1aeff8ec7e74a8f5a] zshop - Process API POST /zshop/userapi/getLoginUserInfo...
+[2020-04-23T11:25:01.820] [INFO] [163f932a086c4cc1aeff8ec7e74a8f5a] zshop - ctx.response.status=400
+[2020-04-23T11:25:01.855] [INFO] [01ed137559ba4816ad10a959be015e97] zshop - Process GET /zshop/login?loginSuccUrl=/zshop?actTabbar=my...
+[2020-04-23T11:25:01.865] [INFO] [01ed137559ba4816ad10a959be015e97] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.931] [INFO] [3cfc23f19ee94750b48b8162f805a70d] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:25:01.932] [INFO] [a8fea4433f5043f19b5bfe8551328d94] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:25:01.936] [INFO] [a8fea4433f5043f19b5bfe8551328d94] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.949] [INFO] [493f212689214629b3ce95ee79556a85] zshop - Process GET /static/js/lib/require.js...
+[2020-04-23T11:25:01.953] [INFO] [04183a2da9824f1e898cb065558bf17c] zshop - Process GET /static/images/vcode.jpg...
+[2020-04-23T11:25:01.981] [INFO] [04183a2da9824f1e898cb065558bf17c] zshop - ctx.response.status=200
+[2020-04-23T11:25:01.999] [INFO] [04183a2da9824f1e898cb065558bf17c] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.031] [INFO] [04183a2da9824f1e898cb065558bf17c] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.078] [INFO] [128a7d23e5ca49e9989af98b4fd8d14e] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:25:02.092] [INFO] [53a71f49ec4d4cde859e0d57644dfd3f] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:25:02.107] [INFO] [53a71f49ec4d4cde859e0d57644dfd3f] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.109] [INFO] [53a71f49ec4d4cde859e0d57644dfd3f] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.135] [INFO] [921c456034554ec499550f7b5a7923f6] zshop - Process GET /static/js/app/login.js...
+[2020-04-23T11:25:02.139] [INFO] [921c456034554ec499550f7b5a7923f6] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.169] [INFO] [1838a44a7bc243dba5e33d3b5417de1b] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:25:02.170] [INFO] [f8e0b313791445a18575a61a9a90e30d] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:25:02.172] [INFO] [f8e0b313791445a18575a61a9a90e30d] zshop - ctx.response.status=200
+[2020-04-23T11:25:02.179] [INFO] [f8e0b313791445a18575a61a9a90e30d] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.843] [INFO] [f85ab77e32df40e4b85db8fe3eb710f8] zshop - Process GET /static/js/app/index-main.js...
+[2020-04-23T11:25:04.847] [INFO] [f85ab77e32df40e4b85db8fe3eb710f8] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.875] [INFO] [97d8ef1ca8ec47ada554da2e4aff9e22] zshop - Process GET /static/js/app/index.js...
+[2020-04-23T11:25:04.877] [INFO] [97d8ef1ca8ec47ada554da2e4aff9e22] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.906] [INFO] [d1d04eb1b67b4f51b9e34f6e7e530b05] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:25:04.908] [INFO] [76795bc5ac6b4901a4f57a3d145c452d] zshop - Process GET /static/js/lib/vue.min.js...
+[2020-04-23T11:25:04.910] [INFO] [00026521b57b4e85a85aa3c770366aaa] zshop - Process GET /static/js/lib/vue-resource.min.js...
+[2020-04-23T11:25:04.923] [INFO] [873ad2b4d3b74b1ca4e4daa6b51f2aa1] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:25:04.924] [INFO] [26933f43bd694c3a8ac92b6ca63a408a] zshop - Process GET /static/js/lib/swiper-4.1.6.min.js...
+[2020-04-23T11:25:04.925] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - Process GET /static/js/app/public.js...
+[2020-04-23T11:25:04.927] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.928] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.931] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.936] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.953] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:04.956] [INFO] [e1aa882d5e2f496895861a8ab80fed57] zshop - ctx.response.status=200
+[2020-04-23T11:25:05.090] [INFO] [9c2985afab7549fe86263ee964f41f54] zshop - Process GET /static/js/lib/swiper.min.js.map...
+[2020-04-23T11:25:05.092] [INFO] [9c2985afab7549fe86263ee964f41f54] zshop - ctx.response.status=404
+[2020-04-23T11:25:05.105] [INFO] [80977d60519d4b2ca3acb4d7a953346e] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:25:05.107] [INFO] [80977d60519d4b2ca3acb4d7a953346e] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.443] [INFO] [28b39af54ec64cafb50b48b61ee03fd9] zshop - Process GET /zshop/prodDetail/1...
+[2020-04-23T11:26:14.459] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `groupId`, `name`, `description`, `price`, `image`, `recommend`, `sales`, `stock`, `detailImages`, `detailHtml`, `createdAt`, `updatedAt`, `version` FROM `product` AS `product` WHERE `product`.`id` = 1;
+[2020-04-23T11:26:14.468] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT `id`, `prodGroup`, `attriId`, `attriName`, `createdAt`, `updatedAt`, `version` FROM `group_attri` AS `group_attri` WHERE `group_attri`.`prodGroup` = 1;
+[2020-04-23T11:26:14.472] [INFO] [083ad3b2836240e08d9fde2bb081686a] system - Executing (default): SELECT t.attriId, t.attriName, t1.attriValue, t2.prodId FROM group_attri t LEFT JOIN group_attri_value t1 ON t.id = t1.groupAttriId LEFT JOIN prod_attri t2 ON t1.id = t2.groupAttriValueId WHERE t.prodGroup = 1
+[2020-04-23T11:26:14.489] [INFO] [28b39af54ec64cafb50b48b61ee03fd9] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.544] [INFO] [2d1195ba4c9e4bbf8c94629bde00dd17] zshop - Process GET /static/css/weui.min.css...
+[2020-04-23T11:26:14.546] [INFO] [57a758e366504aaba4ae9dc3725f3777] zshop - Process GET /static/css/style.css...
+[2020-04-23T11:26:14.549] [INFO] [9b02da687ca944f1a313177cf3d9f102] zshop - Process GET /static/css/swiper-4.1.6.min.css...
+[2020-04-23T11:26:14.575] [INFO] [428150b0eb724c19907f02186b6d254f] zshop - Process GET /static/js/lib/require.js...
+[2020-04-23T11:26:14.577] [INFO] [0f279c57c2704568992f1d4bc6ee832c] zshop - Process GET /static/images/product/detail/prod_detail0.jpg...
+[2020-04-23T11:26:14.578] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - Process GET /static/images/product/detail/prod_detail1.jpg...
+[2020-04-23T11:26:14.582] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.595] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.599] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.603] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.617] [INFO] [5dae19e2bf414e299c1e09c367adf9ba] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.624] [INFO] [0308288fb0314a2abe77b24526ed22c5] zshop - Process GET /static/images/product/detail/prod_detail2.jpg...
+[2020-04-23T11:26:14.627] [INFO] [1c606a8ed71c434fa6c46a4a892a801e] zshop - Process GET /static/images/tophovertree.gif...
+[2020-04-23T11:26:14.638] [INFO] [1c606a8ed71c434fa6c46a4a892a801e] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.652] [INFO] [1c606a8ed71c434fa6c46a4a892a801e] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.654] [INFO] [1c606a8ed71c434fa6c46a4a892a801e] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.776] [INFO] [83e5f7687b7c403eb7386a81e7929cb4] zshop - Process GET /static/js/app/prod-detail.js...
+[2020-04-23T11:26:14.779] [INFO] [87f8258f012549bd9e5367dd36aaf292] zshop - Process GET /static/images/icon-collection.png...
+[2020-04-23T11:26:14.781] [INFO] [83cbb41841e849159a276dea53d90ccc] zshop - Process GET /static/images/footer03.png...
+[2020-04-23T11:26:14.784] [INFO] [c3b40cfcb77b4645aacd25ec6cba2246] zshop - Process GET /static/images/icon-kefu.png...
+[2020-04-23T11:26:14.790] [INFO] [fa0e56af883740ccb4aca371e12e9bc6] zshop - Process GET /static/images/xuanze.png...
+[2020-04-23T11:26:14.805] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - Process GET /static/images/icon-back.png...
+[2020-04-23T11:26:14.808] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.809] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.811] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.813] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.815] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.817] [INFO] [d94ba0d85eef45c893f3c820e88c5d5c] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.849] [INFO] [5484a75650a04eb1ba9c51563251b30e] zshop - Process GET /static/images/index_bak.png...
+[2020-04-23T11:26:14.893] [INFO] [b3945dbeb4514479bc5d9b24bb551931] zshop - Process GET /static/js/lib/jquery.js...
+[2020-04-23T11:26:14.901] [INFO] [4974528d09714d3c894c7e6cc1f3ff4e] zshop - Process GET /static/js/app/public-tip.js...
+[2020-04-23T11:26:14.910] [INFO] [c61e502ffef04f5d837685e9e7a75406] zshop - Process GET /static/js/lib/swiper-4.1.6.min.js...
+[2020-04-23T11:26:14.912] [INFO] [c61e502ffef04f5d837685e9e7a75406] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.918] [INFO] [c61e502ffef04f5d837685e9e7a75406] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.936] [INFO] [c61e502ffef04f5d837685e9e7a75406] zshop - ctx.response.status=200
+[2020-04-23T11:26:14.947] [INFO] [c61e502ffef04f5d837685e9e7a75406] zshop - ctx.response.status=200
+[2020-04-23T11:26:15.007] [INFO] [4671b69a1355418f9252fdafa7feb7dc] zshop - Process GET /static/js/lib/jquery.Spinner.js...
+[2020-04-23T11:26:15.009] [INFO] [4671b69a1355418f9252fdafa7feb7dc] zshop - ctx.response.status=200
+[2020-04-23T11:26:15.029] [INFO] [7080da4a0bf7402ab296809d0ae9da91] zshop - Process GET /static/js/lib/swiper.min.js.map...
+[2020-04-23T11:26:15.033] [INFO] [7080da4a0bf7402ab296809d0ae9da91] zshop - ctx.response.status=404
+[2020-04-23T11:26:15.050] [INFO] [be7caf53fe8644ea808db7d7941bb37b] zshop - Process GET /static/html/404.html...
+[2020-04-23T11:26:15.058] [INFO] [be7caf53fe8644ea808db7d7941bb37b] zshop - ctx.response.status=200
+[2020-04-23T11:26:15.080] [INFO] [f1f01c34884b44bfa15153034ce3206b] zshop - Process GET /static/images/BuynBtn.png...
+[2020-04-23T11:26:15.083] [INFO] [f1f01c34884b44bfa15153034ce3206b] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.357] [INFO] [b6b535438ecc4996bd0271e857ccbdf6] zshop - Process GET /static/html/prod_detail/prod-detial0.html...
+[2020-04-23T11:26:30.361] [INFO] [b6b535438ecc4996bd0271e857ccbdf6] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.381] [INFO] [b610d08c759e436c97201b7a030e185c] zshop - Process GET /static/images/product/content/prod_content1.jpg...
+[2020-04-23T11:26:30.388] [INFO] [0c58b76cb6af4faab3812c429019a0de] zshop - Process GET /static/images/product/content/prod_content2.jpg...
+[2020-04-23T11:26:30.404] [INFO] [b6c786cbc040498588836805592a3423] zshop - Process GET /static/images/product/content/prod_content3.png...
+[2020-04-23T11:26:30.407] [INFO] [2c8f3240aa644702b982e80c80c2fe89] zshop - Process GET /static/images/product/content/prod_content4.png...
+[2020-04-23T11:26:30.410] [INFO] [b35b61db1735498388ddc107957849b6] zshop - Process GET /static/images/product/content/prod_content5.png...
+[2020-04-23T11:26:30.411] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - Process GET /static/images/product/content/prod_content6.png...
+[2020-04-23T11:26:30.415] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.423] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.425] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.427] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.429] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.432] [INFO] [f9c8640cacaa44bb90208d501601614d] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.492] [INFO] [7778b99c946544f296313537644ba48a] zshop - Process GET /static/images/product/content/prod_content13.jpg...
+[2020-04-23T11:26:30.498] [INFO] [2b639901e68b4d39a9f2550e5a5fd011] zshop - Process GET /static/images/product/content/prod_content10.png...
+[2020-04-23T11:26:30.538] [INFO] [2b639901e68b4d39a9f2550e5a5fd011] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.580] [INFO] [2b639901e68b4d39a9f2550e5a5fd011] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.585] [INFO] [06a76fb179e1459bb532d8e42bb05d14] zshop - Process GET /static/images/product/content/prod_content11.png...
+[2020-04-23T11:26:30.595] [INFO] [06a76fb179e1459bb532d8e42bb05d14] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.602] [INFO] [1efa09d851304a1aa4acc5df18453776] zshop - Process GET /static/images/product/content/prod_content12.png...
+[2020-04-23T11:26:30.613] [INFO] [1efa09d851304a1aa4acc5df18453776] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.627] [INFO] [4cb31158ba384a518fec3f2168edfedb] zshop - Process GET /static/images/product/content/prod_content7.png...
+[2020-04-23T11:26:30.643] [INFO] [4cb31158ba384a518fec3f2168edfedb] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.670] [INFO] [952622b81aee489bba11c23f1d562764] zshop - Process GET /static/images/product/content/prod_content9.png...
+[2020-04-23T11:26:30.675] [INFO] [952622b81aee489bba11c23f1d562764] zshop - ctx.response.status=200
+[2020-04-23T11:26:30.700] [INFO] [2b528b63ed2b4e52b4a0c0e07736144a] zshop - Process GET /static/images/product/content/prod_content8.png...
+[2020-04-23T11:26:30.719] [INFO] [2b528b63ed2b4e52b4a0c0e07736144a] zshop - ctx.response.status=200
